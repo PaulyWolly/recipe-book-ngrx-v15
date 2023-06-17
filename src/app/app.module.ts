@@ -13,7 +13,7 @@ import { environment } from '../environments/environment';
 import { RecipeEffects } from './recipes/store/recipe.effects';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { StoreModule } from '@ngrx/store';
+// import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
@@ -23,6 +23,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ScrollComponent } from './scroll/scroll.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { StoreModule } from '@ngrx/store';
 
 
 
@@ -38,9 +39,9 @@ import { MatIconModule } from '@angular/material/icon';
     HttpClientModule,
     AppRoutingModule,
     StoreModule.forRoot(fromApp.appReducer),
-    EffectsModule.forRoot([AuthEffects, RecipeEffects]),
-    StoreDevtoolsModule.instrument({ logOnly: environment.production }),
-    StoreRouterConnectingModule.forRoot(),
+    // EffectsModule.forRoot([AuthEffects, RecipeEffects]),
+    // StoreDevtoolsModule.instrument({ logOnly: environment.production }),
+    // StoreRouterConnectingModule.forRoot(),
     SharedModule,
     CoreModule,
     FormsModule,
